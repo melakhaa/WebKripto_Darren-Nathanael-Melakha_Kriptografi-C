@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kriptografi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="btnDarkMode" class="btn-toggle-dark">Dark Mode</button>
+    <div class="container">
+        <h1>Kalkulator Enkripsi & Dekripsi</h1>
+
+        <div class="form-group">
+            <label for="cipherSelect">Pilih Cipher:</label>
+            <select id="cipherSelect">
+                <option value="vigenere">Vigenere Cipher</option>
+                <option value="affine">Affine Cipher</option>
+                <option value="playfair">Playfair Cipher</option>
+                <option value="hill">Hill Cipher</option>
+                <option value="enigma">Enigma Cipher</option>
+            </select>
+        </div>
+
+        <div id="keyInputs" class="key-section">
+            <div id="vigenereKeyDiv" class="cipher-key active">
+                <label>Kunci (Teks):</label>
+                <input type="text" id="vigenereKey" placeholder="Contoh: SECRET">
+            </div>
+
+            <div id="affineKeyDiv" class="cipher-key">
+                <label>Multiplier (a):</label>
+                <input type="number" id="affineA" placeholder="Contoh: 5">
+                <label>Shift (b):</label>
+                <input type="number" id="affineB" placeholder="Contoh: 8">
+                <small>Catatan: Nilai 'a' harus relatif prima dengan 26.</small>
+            </div>
+
+            <div id="playfairKeyDiv" class="cipher-key">
+                <label>Kunci (Teks):</label>
+                <input type="text" id="playfairKey" placeholder="Contoh: KEYWORD">
+            </div>
+
+            <div id="hillKeyDiv" class="cipher-key">
+                <label>Matriks Kunci 2x2:</label>
+                <div class="matrix-grid">
+                    <input type="number" id="hill00" placeholder="0,0 (misal: 3)">
+                    <input type="number" id="hill01" placeholder="0,1 (misal: 3)">
+                    <input type="number" id="hill10" placeholder="1,0 (misal: 2)">
+                    <input type="number" id="hill11" placeholder="1,1 (misal: 5)">
+                </div>
+                <small>Catatan: Determinan matriks harus relatif prima dengan 26 untuk dekripsi.</small>
+            </div>
+
+            <div id="enigmaKeyDiv" class="cipher-key">
+                <label>Posisi Rotor Awal (I, II, III):</label>
+                <div class="enigma-grid">
+                    <input type="text" id="enigmaR1" maxlength="1" placeholder="Rotor I" value="A">
+                    <input type="text" id="enigmaR2" maxlength="1" placeholder="Rotor II" value="A">
+                    <input type="text" id="enigmaR3" maxlength="1" placeholder="Rotor III" value="A">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputText">Teks (Plaintext / Ciphertext):</label>
+            <textarea id="inputText" rows="4" placeholder="Masukkan teks (hanya memproses huruf alfabet)..."></textarea>
+        </div>
+
+        <div class="action-buttons">
+            <button id="btnEncrypt" class="btn primary">Enkripsi</button>
+            <button id="btnDecrypt" class="btn secondary">Dekripsi</button>
+        </div>
+
+        <div class="form-group">
+            <label for="outputText">Hasil:</label>
+            <textarea id="outputText" rows="4" readonly></textarea>
+        </div>
+
+
+        <div class="identity">
+            <p><strong>Darren Nathanael Melakha</strong></p>
+            <p>NIM: 21120123120001</p>
+            <p>Kelas: Kriptografi C</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
