@@ -1,10 +1,10 @@
 # Kalkulator Kriptografi Berbasis Web
 
-Sebuah program kalkulator enkripsi dan dekripsi berbasis web sederhana yang mengimplementasikan 5 jenis *cipher* klasik. Program ini dibangun menggunakan kemurnian HTML, CSS, dan JavaScript tanpa *framework* tambahan, sehingga sangat mudah untuk dijalankan dan dimodifikasi.
+Sebuah program kalkulator enkripsi dan dekripsi berbasis web sederhana yang mengimplementasikan 5 jenis *cipher* klasik. Program ini dibangun menggunakan HTML, CSS, dan JavaScript tanpa *framework* tambahan.
 
 ## Fitur Cipher yang Didukung
 
-Aplikasi ini mendukung algoritma berikut (berfungsi untuk huruf alfabet A-Z):
+Aplikasi ini mendukung algoritma berikut
 
 1.  **Vigenere Cipher standard (26 huruf alfabet)**
     *   Menggunakan kata kuci teks untuk menggeser huruf pada *plaintext*.
@@ -29,17 +29,8 @@ Aplikasi ini mendukung algoritma berikut (berfungsi untuk huruf alfabet A-Z):
 
 ## Cara Menjalankan Aplikasi
 
-Aplikasi ini terdiri dari *front-end* murni, berjalan langsung di *browser*. Anda bisa menjalankannya dengan dua cara:
-
-### Cara 1: Tanpa Server (Stand-alone)
-Cara paling mudah untuk membuka program ini:
-1. Buka folder `Web Kripto` di komputer Anda (`c:\Kuliah\Matkul Sem 6\Kripto\Web Kripto`).
-2. Klik ganda ganda (`double-click`) file `index.html`.
-3. Aplikasi akan langsung terbuka di browser utama Anda (Google Chrome, Microsoft Edge, dll).
-
-### Cara 2: Menggunakan Local Server (Node.js)
-Jika Anda ingin mengembangkan lebih lanjut atau melakukan modifikasi dengan fitur *live-reload*:
-1. Pastikan Anda telah menginstal [Node.js](https://nodejs.org/).
+### Menggunakan Local Server (Node.js)
+1. Pastikan telah menginstal [Node.js](https://nodejs.org/).
 2. Buka terminal atau Command Prompt dan arahkan ke dalam direktori aplikasi ini.
 3. Instal *dependency*-nya dengan menjalankan:
    ```bash
@@ -49,7 +40,7 @@ Jika Anda ingin mengembangkan lebih lanjut atau melakukan modifikasi dengan fitu
    ```bash
    npm start
    ```
-5. Browser Anda akan secara otomatis membuka aplikasi di alamat `http://127.0.0.1:8080/`. Jika Anda mengubah atau menyimpan kode (`index.html`, `style.css`, atau `script.js`), halaman di browser akan otomatis diperbarui (*refresh*).
+5. Browser akan secara otomatis membuka aplikasi di alamat `http://127.0.0.1:8080/`. Jika mengubah atau menyimpan kode (`index.html`, `style.css`, atau `script.js`), halaman di browser akan otomatis diperbarui (*refresh*).
 
 ## Struktur File
 *   `index.html` : Kerangka HTML untuk antarmuka pengguna (GUI).
